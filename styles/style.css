@@ -15,10 +15,11 @@ body {
 
 nav {
   position: relative;
+  overflow-y: hidden;
 }
 
 .navbar {
-  padding: 8px 16px;
+  padding: 8px 16px calc(213.5px - 87.5px);
 }
 
 .navbar-brand {
@@ -62,9 +63,22 @@ nav {
   color: rgba(0,0,0,.6);
 }
 
+form.form-inline {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 78px;
+}
+
 .form-group {
   float: right !important;
   margin-bottom: 0;
+}
+
+.form-row {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
 }
 
 button {
@@ -89,7 +103,7 @@ button {
 
 .form-group,
 .btn-div {
-  margin-left: 85px;
+  margin-left: calc(100% - 209px);
   }
 
 input {
@@ -125,7 +139,7 @@ header {
   background-image: url('../images/background.jpg');
   background-repeat: no-repeat;
   background-position: center top;
-  margin-bottom: 200px;
+  margin-bottom: 100vh;
 }
 
 .jumbotron {
@@ -134,6 +148,7 @@ header {
   padding-left: 0;
   padding-right: 0;
   margin-bottom: 0;
+  padding-top: 5px;
 }
 
 h1.display-4 {
@@ -156,9 +171,14 @@ h1.display-4 {
   text-align: center;
 }
 
-#form-signup input.form-control {
-  display: inline-block;
-  min-width: 250px;
+.input-group.mb-3 {
+  width: 280.38px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-group.mb-3 > input {
+  max-width: 240px;
 }
 
 #form-signup button {
@@ -181,16 +201,11 @@ h1.display-4 {
   outline-offset: -2px;
 }
 
-/* Media queries */
+/* MEDIA QUERIES */
 
 /* First Breakpoint */
 
 @media (min-width: 375px) {
-
-  .form-group,
-  .btn-div {
-    margin-left: 140px;
-  }
 
   .list-inline li:last-of-type a {
     padding-top: 7.5px;
@@ -208,19 +223,31 @@ h1.display-4 {
   .list-inline li:nth-of-type(3) {
     left: 10px;
   }
+
+  h1.display-4 {
+    letter-spacing: unset;
+  }
+
+  .input-group.mb-3 {
+    width: 330.38px;
+  }
+  
+  .input-group.mb-3 > input {
+    max-width: 290px;
+  }
 }
 
 /* Second Breakpoint */
 
 @media (min-width: 385px) {
   .navbar-brand {
-    top: -1px;
+    top: -18px;
   }
 
-  .form-group,
+  /* .form-group,
   .btn-div {
     margin-left: 150px;
-  }
+  } */
 
   .list-inline li:nth-of-type(3) {
     left: unset;
@@ -247,39 +274,27 @@ h1.display-4 {
 
 /* Third Breakpoint */
 
-@media (min-width: 430px) {
-  .form-group,
-  .btn-div {
-    margin-left: 195px;
+@media (min-width: 400px) {
+  .navbar-brand {
+    top: -1px;
+  }
+
+  form.form-inline {
+    top: 43px;
+  }
+
+  header {
+    margin-top: 169px;
   }
 }
 
 /* Fourth Breakpoint */
 
-@media (min-width: 480px) {
-  .navbar-brand {
-    top: -1px;
-  }
-
-  .form-group,
-  .btn-div {
-    margin-left: 245px;
-  }
-}
-
-/* Fifth Breakpoint */
-
-@media (min-width: 520px) {
-
-  .form-group,
-  .btn-div {
-    margin-left: 285px;
-  }
-}
-
-/* Sixth Breakpoint */
-
 @media (min-width: 576px) {
+  .navbar {
+    padding: 8px 16px calc(213.5px - 164.5px);
+  }
+  
   .form-group,
   button {
     display: inline-block;
@@ -287,7 +302,7 @@ h1.display-4 {
   }
   
   .form-row {
-    padding-left: 65px;
+    padding-left: calc(100% - 484.61px);
     margin-right: 0;
   }
 
@@ -298,9 +313,36 @@ h1.display-4 {
   input {
     margin-right: 4.5px;
   }
+
+  header {
+    margin-top: 92px;
+  }
+
+  h1.display-4 {
+    padding-top: 18px;
+  }
+
+  #form-signup {
+    display: inline-flex;
+    width: 497px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .input-group.mb-3 {
+    position: relative;
+    left: 20px;
+    margin-bottom: 0 !important;
+  }
+
+  #form-signup button {
+    margin-left: 5px;
+    position: relative;
+    left: -10px;
+  }
 }
 
-/* Seventh Breakpoint */
+/* Fifth Breakpoint */
 
 @media (min-width: 600px) {
   form.form-inline {
@@ -314,19 +356,26 @@ h1.display-4 {
   }
 }
 
-/* Eighth Breakpoint */
+/* Sixth Breakpoint */
 
 @media (min-width: 768px) {
-  
+  #form-signup {
+    display: flex;
+  }
+
+  .input-group.mb-3 {
+    width: 340.38px;
+    left: 16px;
+  }
+
+  .input-group.mb-3 > input {
+    max-width: 300px;
+  }
 }
 
-/* Ninth Breakpoint */
+/* Seventh Breakpoint */
 
 @media (min-width: 870px) {
-  .form-row {
-    padding-left: 0;
-    margin-left: 0;
-  }
 
   form.form-inline {
     top: 5px;
@@ -335,6 +384,14 @@ h1.display-4 {
 
   .navbar {
     padding-bottom: 11px;
+  }
+
+  header {
+    margin-top: 54px;
+  }
+
+  h1.display-4 {
+    padding-top: 56px;
   }
 }
 
