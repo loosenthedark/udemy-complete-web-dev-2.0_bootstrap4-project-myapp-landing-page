@@ -3,8 +3,15 @@ body *,
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
+
+body {
+  position: relative;
+}
+
+/* Fixed navbar */
 
 nav {
   position: relative;
@@ -61,11 +68,29 @@ nav {
 }
 
 button {
-  border: none;
-  background: #5cb85c;
-  opacity: 0.8;
   display: block;
 }
+
+.btn-success {
+  background-color: #5cb85c;
+  border: 1px solid #5cb85c;
+}
+
+.btn-success:hover,
+.btn-success:not(:disabled):not(.disabled):active {
+  background-color: #449d44;
+  border-color: #419641;
+}
+
+.btn-success:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.form-group,
+.btn-div {
+  margin-left: 85px;
+  }
 
 input {
   min-width: 193px;
@@ -93,6 +118,71 @@ input {
   color: #98999d;
 }
 
+/* Header (Jumbotron) */
+
+header {
+  margin-top: 205px;
+  background-image: url('../images/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  margin-bottom: 200px;
+}
+
+.jumbotron {
+  background-color: transparent;
+  background-size: cover;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 0;
+}
+
+h1.display-4 {
+  font-size: 72px;
+  letter-spacing: -3.4px;
+  line-height: 1.1;
+  overflow-y: hidden;
+  margin-bottom: 6px;
+}
+
+.jumbotron > p:nth-of-type(2) {
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.text-main {
+  color: #373a3c;
+  font-weight: 300;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+#form-signup input.form-control {
+  display: inline-block;
+  min-width: 250px;
+}
+
+#form-signup button {
+  display: block;
+  margin: 0 auto;
+  background-color: #0275d8;
+  border-color:  #0275d8;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+#form-signup button:hover,
+#form-signup button:active {
+  background-color: #025aa5;
+  border-color:  #01549b;
+}
+
+#form-signup button:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* Media queries */
+
 /* First Breakpoint */
 
 @media (min-width: 375px) {
@@ -119,6 +209,8 @@ input {
     left: 10px;
   }
 }
+
+/* Second Breakpoint */
 
 @media (min-width: 385px) {
   .navbar-brand {
@@ -153,12 +245,16 @@ input {
   }
 }
 
+/* Third Breakpoint */
+
 @media (min-width: 430px) {
   .form-group,
   .btn-div {
     margin-left: 195px;
   }
 }
+
+/* Fourth Breakpoint */
 
 @media (min-width: 480px) {
   .navbar-brand {
@@ -171,6 +267,8 @@ input {
   }
 }
 
+/* Fifth Breakpoint */
+
 @media (min-width: 520px) {
 
   .form-group,
@@ -178,6 +276,8 @@ input {
     margin-left: 285px;
   }
 }
+
+/* Sixth Breakpoint */
 
 @media (min-width: 576px) {
   .form-group,
@@ -188,6 +288,7 @@ input {
   
   .form-row {
     padding-left: 65px;
+    margin-right: 0;
   }
 
   .btn-div {
@@ -199,11 +300,13 @@ input {
   }
 }
 
+/* Seventh Breakpoint */
+
 @media (min-width: 600px) {
   form.form-inline {
     position: absolute;
     top: 43.5px;
-    right: 30px;
+    right: 20px;
   }
 
   .navbar {
@@ -211,18 +314,23 @@ input {
   }
 }
 
+/* Eighth Breakpoint */
+
 @media (min-width: 768px) {
   
 }
 
-@media (min-width: 851px) {
+/* Ninth Breakpoint */
+
+@media (min-width: 870px) {
   .form-row {
     padding-left: 0;
+    margin-left: 0;
   }
 
   form.form-inline {
     top: 5px;
-    right: 20px;
+    right: 16px;
   }
 
   .navbar {
