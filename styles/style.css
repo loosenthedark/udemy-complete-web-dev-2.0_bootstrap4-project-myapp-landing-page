@@ -243,7 +243,7 @@ h1.display-4 {
 /* Main section */
 
 main {
-  margin-bottom: 50px;
+  margin-bottom: 5vh;
 }
 
 main h2.text-main {
@@ -472,7 +472,7 @@ footer .col-12 {
   }
 
   main h2.text-main {
-    padding-top: 120px;
+    padding-top: 16vh;
 }
 
   .card-col {
@@ -491,11 +491,11 @@ footer .col-12 {
   }
 
   footer h3.text-main {
-    padding-top: 180px;
+    padding-top: 17vh;
   }
 
   footer {
-    padding-bottom: 220px;
+    padding-bottom: 24vh;
   }
 }
 
@@ -517,8 +517,8 @@ footer .col-12 {
 
 @media (min-width: 768px) {
   header {
-    padding-top: 240px;
-    padding-bottom: 100px;
+    padding-top: 33vh;
+    padding-bottom: 35vh;
   }
 
   #form-signup {
@@ -534,6 +534,14 @@ footer .col-12 {
     max-width: 300px;
   }
 
+  main h2.text-main {
+    padding-top: 14vh;
+  }
+
+  .card-row {
+    padding-top: 5vh;
+  }
+
   .card-col {
     max-width: 235px;
   }
@@ -544,8 +552,8 @@ footer .col-12 {
 @media (min-width: 870px) {
 
   header {
-    padding-top: 180px;
-    padding-bottom: 110px;
+    padding-top: 28vh;
+    padding-bottom: 40vh;
   }
 
   form.form-inline {
@@ -561,20 +569,16 @@ footer .col-12 {
     padding-top: 56px;
   }
 
-  main h2.text-main {
-    padding-top: 80px;
-  }
-
   .card-row {
-    padding-top: 20px;
+    padding-top: 4vh;
   }
 
   footer h3.text-main {
-    padding-top: 200px;
+    padding-top: 30vh;
   }
 
   footer {
-    padding-bottom: 240px;
+    padding-bottom: 25vh;
   }
 }
 
@@ -589,17 +593,24 @@ footer .col-12 {
   .card-row {
     padding-top: 10px;
   }
+
+  main {
+    margin-bottom: 16vh;
+  }
+
+  h2.text-main {
+    padding-top: 20vh;
+  }
+
+  main p.text-main {
+    margin-bottom: 5vh;
+  }
   
 }
 
 /* Ninth Breakpoint */
 
 @media (min-width: 1200px) {
-
-  header {
-    padding-top: 160px;
-    padding-bottom: 130px;
-  }
 
   .card-col {
     max-width: 374px;
