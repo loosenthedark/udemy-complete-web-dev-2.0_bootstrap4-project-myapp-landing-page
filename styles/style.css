@@ -60,11 +60,6 @@ nav {
   padding-right: unset;
 }
 
-.list-inline li a.active {
-  color: rgba(0,0,0,.6);
-  text-decoration: none;
-}
-
 .list-inline li {
   float: left;
   padding-bottom: 4px;
@@ -180,7 +175,7 @@ input {
 /* Header (Jumbotron) */
 
 header {
-  margin-top: 205px;
+  padding-top: 205px;
   background-image: url('../images/background.jpg');
   background-repeat: no-repeat;
   background-position: center top;
@@ -254,7 +249,7 @@ main {
 main h2.text-main {
   font-size: 40px;
   font-weight: 500;
-  padding-top: 50px;
+  padding-top: 220px;
   line-height: 1.1;
   margin-bottom: 8px;
   overflow-y: hidden;
@@ -268,7 +263,7 @@ footer p.text-main {
 }
 
 .card-row {
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 h5 {
@@ -302,7 +297,7 @@ footer {
 footer h3.text-main {
   font-size: 32px;
   font-weight: 500;
-  padding-top: 150px;
+  padding-top: 280px;
   line-height: 1.1;
   margin-bottom: 8px;
   overflow-y: hidden;
@@ -353,7 +348,11 @@ footer .col-12 {
   }
 
   header {
-    margin-top: 174px;
+    padding-top: 174px;
+  }
+
+  main h2.text-main {
+    padding-top: 190px;
   }
 
   h1.display-4 {
@@ -415,7 +414,7 @@ footer .col-12 {
   }
 
   header {
-    margin-top: 169px;
+    padding-top: 169px;
   }
 }
 
@@ -446,7 +445,7 @@ footer .col-12 {
   }
 
   header {
-    margin-top: 92px;
+    padding-top: 92px;
   }
 
   h1.display-4 {
@@ -472,6 +471,10 @@ footer .col-12 {
     left: -10px;
   }
 
+  main h2.text-main {
+    padding-top: 120px;
+}
+
   .card-col {
     flex: 1;
     display: flex;
@@ -485,6 +488,14 @@ footer .col-12 {
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+
+  footer h3.text-main {
+    padding-top: 180px;
+  }
+
+  footer {
+    padding-bottom: 220px;
   }
 }
 
@@ -505,6 +516,11 @@ footer .col-12 {
 /* Sixth Breakpoint */
 
 @media (min-width: 768px) {
+  header {
+    padding-top: 240px;
+    padding-bottom: 100px;
+  }
+
   #form-signup {
     display: flex;
   }
@@ -527,6 +543,11 @@ footer .col-12 {
 
 @media (min-width: 870px) {
 
+  header {
+    padding-top: 180px;
+    padding-bottom: 110px;
+  }
+
   form.form-inline {
     top: 5px;
     right: 16px;
@@ -536,12 +557,24 @@ footer .col-12 {
     padding-bottom: 11px;
   }
 
-  header {
-    margin-top: 54px;
-  }
-
   h1.display-4 {
     padding-top: 56px;
+  }
+
+  main h2.text-main {
+    padding-top: 80px;
+  }
+
+  .card-row {
+    padding-top: 20px;
+  }
+
+  footer h3.text-main {
+    padding-top: 200px;
+  }
+
+  footer {
+    padding-bottom: 240px;
   }
 }
 
@@ -552,12 +585,21 @@ footer .col-12 {
   .card-col {
     max-width: 308px;
   }
+
+  .card-row {
+    padding-top: 10px;
+  }
   
 }
 
 /* Ninth Breakpoint */
 
 @media (min-width: 1200px) {
+
+  header {
+    padding-top: 160px;
+    padding-bottom: 130px;
+  }
 
   .card-col {
     max-width: 374px;
