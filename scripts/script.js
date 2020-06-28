@@ -1,1 +1,1 @@
-// $(".navspy-menu").navspy();
+$('body').scrollspy({ target: '#navbar-list' })

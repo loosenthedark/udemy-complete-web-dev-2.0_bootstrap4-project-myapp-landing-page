@@ -42,9 +42,22 @@ nav {
   /* border: 1px solid red; */
 }
 
+.navbar-nav {
+  display: unset;
+  flex-direction: unset;
+  padding-left: unset;
+  margin-bottom: unset;
+  list-style: unset;
+}
+
 .nav-link {
   position: relative;
   z-index: 99;
+  display: unset;
+}
+
+.navbar-nav .nav-link {
+  padding-right: unset;
 }
 
 .list-inline li a.active {
@@ -55,6 +68,7 @@ nav {
 .list-inline li {
   float: left;
   padding-bottom: 4px;
+  z-index: 98;
 }
 
 .list-inline li:nth-of-type(3) {
@@ -68,6 +82,11 @@ nav {
   padding-right: 4px;
   padding-bottom: 4px;
   padding-top: 7.5px;
+  z-index: 99;
+}
+
+.list-inline-item:not(:last-child) {
+  margin-right: 16px;
 }
 
 .list-inline li:last-of-type {
@@ -305,9 +324,9 @@ footer .col-12 {
 
   .list-inline li:last-of-type a {
     padding-top: 7.5px;
-    padding-right: 8px;
+    /* padding-right: 8px; */
     padding-bottom: 6px;
-    padding-left: 4px;
+    /* padding-left: 4px; */
     }
 
   .list-inline li:first-of-type a {
@@ -326,7 +345,7 @@ footer .col-12 {
   }
 
   .list-inline-item:not(:last-child) {
-    margin-right: 5px;
+    margin-right: 11.5px;
   }
 
   form.form-inline {
@@ -354,7 +373,7 @@ footer .col-12 {
 
 @media (min-width: 385px) {
   .navbar-brand {
-    top: -18px;
+    top: -1px;
   }
 
   .list-inline li:nth-of-type(3) {
@@ -377,6 +396,10 @@ footer .col-12 {
   .list-inline li:first-of-type a,
   .list-inline li:nth-of-type(2) a {
     padding-bottom: 3px;
+  }
+
+  .list-inline-item:not(:last-child) {
+    margin-right: 16px;
   }
 }
 
