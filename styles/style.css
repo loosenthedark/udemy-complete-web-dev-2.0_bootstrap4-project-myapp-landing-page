@@ -408,18 +408,23 @@ footer .col-12 {
     top: -1px;
   }
 
+  header {
+    padding-top: 30vh;
+    padding-bottom: 10vh;
+  }
+
   form.form-inline {
     top: 43px;
   }
 
-  header {
-    padding-top: 169px;
+  footer h3.text-main {
+    padding-top: 50vh;
   }
 }
 
 /* Fourth Breakpoint */
 
-@media (min-width: 576px) {
+@media (min-width: 568px) {
   .navbar {
     padding: 8px 16px calc(213.5px - 164.5px);
   }
@@ -471,7 +476,7 @@ footer .col-12 {
   }
 
   main h2.text-main {
-    padding-top: 16vh;
+    padding-top: 28vh;
 }
 
   .card-col {
@@ -490,7 +495,7 @@ footer .col-12 {
   }
 
   footer h3.text-main {
-    padding-top: 17vh;
+    padding-top: 35vh;
   }
 
   footer {
@@ -534,7 +539,7 @@ footer .col-12 {
   }
 
   main h2.text-main {
-    padding-top: 14vh;
+    padding-top: 24vh;
   }
 
   .card-row {
@@ -585,12 +590,22 @@ footer .col-12 {
 
 @media (min-width: 992px) {
 
+  header {
+    padding-top: 32vh;
+    padding-bottom: 40vh;
+    background-size: cover;
+  }
+
   .card-col {
     max-width: 308px;
   }
 
   .card-row {
     padding-top: 10px;
+  }
+
+  h1.display-4 {
+    padding-top: 70px;
   }
 
   main {
@@ -613,6 +628,10 @@ footer .col-12 {
 
   .card-col {
     max-width: 374px;
+  }
+
+  main h2.text-main {
+    padding-top: 20vh;
   }
   
 }
