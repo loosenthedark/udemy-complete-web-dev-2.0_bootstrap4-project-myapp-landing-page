@@ -7,6 +7,10 @@ body *,
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
 }
@@ -28,12 +32,23 @@ nav {
   position: relative;
   /* border: 1px solid red; */
   top: -17px;
+  z-index: 99;
 }
 
 #navbarNavDropdown {
   width: calc(100% - 80px);
   float: left;
   /* border: 1px solid red; */
+}
+
+.nav-link {
+  position: relative;
+  z-index: 99;
+}
+
+.list-inline li a.active {
+  color: rgba(0,0,0,.6);
+  text-decoration: none;
 }
 
 .list-inline li {
@@ -61,6 +76,7 @@ nav {
 
 .list-inline li a:hover {
   color: rgba(0,0,0,.6);
+  text-decoration: none;
 }
 
 form.form-inline {
@@ -139,7 +155,6 @@ header {
   background-image: url('../images/background.jpg');
   background-repeat: no-repeat;
   background-position: center top;
-  margin-bottom: 100vh;
 }
 
 .jumbotron {
@@ -172,13 +187,13 @@ h1.display-4 {
 }
 
 .input-group.mb-3 {
-  width: 280.38px;
+  width: 275.38px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .input-group.mb-3 > input {
-  max-width: 240px;
+  max-width: 235px;
 }
 
 #form-signup button {
@@ -199,6 +214,73 @@ h1.display-4 {
 #form-signup button:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
+}
+
+/* Main section */
+
+main {
+  margin-bottom: 50px;
+}
+
+main h2.text-main {
+  font-size: 40px;
+  font-weight: 500;
+  padding-top: 50px;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  overflow-y: hidden;
+}
+
+main p.text-main,
+footer p.text-main {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.card-row {
+  padding-top: 50px;
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 1.1;
+  overflow-y: hidden;
+}
+
+h5.card-title i {
+  position: relative;
+  top: 2px;
+}
+
+.card {
+  margin-bottom: 12px;
+}
+
+/* Footer */
+
+footer {
+  background: #01ffff;
+  padding-bottom: 180px;
+}
+
+.footer-img img {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+footer h3.text-main {
+  font-size: 32px;
+  font-weight: 500;
+  padding-top: 150px;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  overflow-y: hidden;
+}
+
+footer .col-12 {
+  padding: 0;
 }
 
 /* MEDIA QUERIES */
@@ -243,11 +325,6 @@ h1.display-4 {
   .navbar-brand {
     top: -18px;
   }
-
-  /* .form-group,
-  .btn-div {
-    margin-left: 150px;
-  } */
 
   .list-inline li:nth-of-type(3) {
     left: unset;
@@ -340,6 +417,21 @@ h1.display-4 {
     position: relative;
     left: -10px;
   }
+
+  .card-col {
+    flex: 1;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 187px;
+  }
+
+  .card-row {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* Fifth Breakpoint */
@@ -371,6 +463,10 @@ h1.display-4 {
   .input-group.mb-3 > input {
     max-width: 300px;
   }
+
+  .card-col {
+    max-width: 235px;
+  }
 }
 
 /* Seventh Breakpoint */
@@ -393,5 +489,25 @@ h1.display-4 {
   h1.display-4 {
     padding-top: 56px;
   }
+}
+
+/* Eighth Breakpoint */
+
+@media (min-width: 992px) {
+
+  .card-col {
+    max-width: 308px;
+  }
+  
+}
+
+/* Ninth Breakpoint */
+
+@media (min-width: 1200px) {
+
+  .card-col {
+    max-width: 374px;
+  }
+  
 }
 

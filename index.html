@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html>
 
 <head>
   <!-- Required meta tags -->
@@ -22,21 +22,21 @@
   <title>MyApp</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar" lang="en">
 
   <!-- Fixed navbar -->
-  <nav class="navbar navbar-light fixed-top bg-light">
+  <nav class="navbar navbar-light fixed-top bg-light" id='navbar'>
     <a class="navbar-brand" href="#">MyApp</a>
     <div id="navbarNavDropdown">
-      <ul class="list-inline">
-        <li class="nav-item list-inline-item">
-          <a class="nav-link" href="#">Home</a>
+      <ul role='tablist' id='navbar-list' class="nav list-inline navspy-menu">
+        <li class="nav-item list-inline-item" data-spy-on="#home">
+          <a class="active" href="#home">Home</a>
         </li>
-        <li class="nav-item list-inline-item">
-          <a class="nav-link" href="#">About</a>
+        <li class="nav-item list-inline-item" data-spy-on="#about">
+          <a href="#about">About</a>
         </li>
-        <li class="nav-item list-inline-item">
-          <a class="nav-link" href="#">Download The App</a>
+        <li class="nav-item list-inline-item" data-spy-on="#download">
+          <a href="#download">Download The App</a>
         </li>
       </ul>
     </div>
@@ -54,9 +54,8 @@
       </div>
     </form>
   </nav>
-
   <!-- Header -->
-  <header>
+  <header id='home' class='section'>
     <div class="container">
       <div class="jumbotron">
         <h1 class="text-main display-4">My Awesome App!</h1>
@@ -76,12 +75,69 @@
       </div>
     </div>
   </header>
-
+  <!-- Main section -->
+  <main class='section' id='about'>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="main-heading text-main">Why This App Is Awesome</h2>
+          <p class="text-main main-subheading">Summary, once again, of your app's awesomeness</p>
+        </div>
+      </div>
+      <div class="row card-row">
+        <div class="col-12 col-sm-4 card-col">
+          <div class="card">
+            <img class="card-img-top" src="images/fatherandson.jpg" alt="a father holding his young son">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-anchor"></i><span class="card-title-text"> Card title</span>
+              </h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-4 card-col">
+          <div class="card">
+            <img class="card-img-top" src="images/fatherandson.jpg" alt="a father holding his young son">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-bicycle"></i><span class="card-title-text"> Card title</span>
+              </h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-4 card-col">
+          <div class="card">
+            <img class="card-img-top" src="images/fatherandson.jpg" alt="a father holding his young son">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-birthday-cake"></i><span class="card-title-text"> Card
+                  title</span></h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This card has even longer content than the first to show that equal height action.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class='section' id='download'>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="footer-heading text-main">Download the app!</h3>
+          <p class="text-main footer-subheading">Really, why should I download this app??</p>
+          <p class='footer-img'><img src="images/App-Store-Icon.png" alt="App Store icon"></p>
+        </div>
+      </div>
+    </div>
+  </footer>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Tether.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>

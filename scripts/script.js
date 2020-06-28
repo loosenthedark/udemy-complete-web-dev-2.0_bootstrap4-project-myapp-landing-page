@@ -1,0 +1,1 @@
+$(".navspy-menu").navspy();
