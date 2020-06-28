@@ -635,7 +635,19 @@ footer .col-12 {
   }
 
   main h2.text-main {
-    padding-top: 20vh;
+    padding-top: 10vh;
+  }
+
+  main p.text-main {
+    margin-bottom: 0.5vh;
+  }
+
+  footer h3.text-main {
+    padding-top: 35vh;
+  }
+
+  footer {
+    padding-bottom: 35vh;
   }
   
 }
