@@ -1,1 +1,1 @@
-$(".navspy-menu").navspy();
+// $(".navspy-menu").navspy();

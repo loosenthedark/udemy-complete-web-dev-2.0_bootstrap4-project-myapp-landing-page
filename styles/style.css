@@ -31,13 +31,14 @@ nav {
   width: 80px;
   position: relative;
   /* border: 1px solid red; */
-  top: -17px;
+  top: -16px;
   z-index: 99;
 }
 
 #navbarNavDropdown {
   width: calc(100% - 80px);
   float: left;
+  padding-top: 8px;
   /* border: 1px solid red; */
 }
 
@@ -53,6 +54,7 @@ nav {
 
 .list-inline li {
   float: left;
+  padding-bottom: 4px;
 }
 
 .list-inline li:nth-of-type(3) {
@@ -68,10 +70,18 @@ nav {
   padding-top: 7.5px;
 }
 
+.list-inline li:last-of-type {
+  padding-top: 2px;
+  padding-bottom: 10px;
+}
+
 .list-inline li:last-of-type a {
-  padding-right: 16px;
+  padding-right: 0;
   padding-bottom: 3px;
-  padding-top: 9px;
+}
+
+.list-inline li:first-of-type a {
+  padding-left: 0;
 }
 
 .list-inline li a:hover {
@@ -289,9 +299,16 @@ footer .col-12 {
 
 @media (min-width: 375px) {
 
+  .navbar-brand {
+    top: 2px;
+  }
+
   .list-inline li:last-of-type a {
     padding-top: 7.5px;
-  }
+    padding-right: 8px;
+    padding-bottom: 6px;
+    padding-left: 4px;
+    }
 
   .list-inline li:first-of-type a {
     padding-left: 0;
@@ -303,7 +320,21 @@ footer .col-12 {
   }
 
   .list-inline li:nth-of-type(3) {
-    left: 10px;
+    padding-bottom: 4px;
+    padding-top: 0;
+    left: 0;
+  }
+
+  .list-inline-item:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  form.form-inline {
+    top: 50px;
+  }
+
+  header {
+    margin-top: 174px;
   }
 
   h1.display-4 {
